@@ -24,10 +24,6 @@ DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 # common msm8660 configs
 $(call inherit-product, device/htc/msm8660-common/msm8660.mk)
 
-# Vold config
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/config/vold.fstab:system/etc/vold.fstab
-
 # idc
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/config/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc
