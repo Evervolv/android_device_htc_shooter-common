@@ -31,6 +31,7 @@ PRODUCT_COPY_FILES += \
 # BCM4329 BT Firmware
 PRODUCT_COPY_FILES += \
     device/htc/msm8660-common/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd
+    device/htc/msm8660-common/firmware/bcm4330.hcd:system/vendor/firmware/bcm4330.hcd
 
 # Permissions
 PRODUCT_COPY_FILES += \

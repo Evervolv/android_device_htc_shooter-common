@@ -30,21 +30,21 @@
 # inherit from common msm8660
 -include device/htc/msm8660-common/BoardConfigCommon.mk
 
-# Broadcom specific config
--include device/htc/msm8660-common/bcm.mk
-
 BOARD_KERNEL_BASE := 0x48000000
 BOARD_KERNEL_PAGE_SIZE := 2048
 
 # Camera
-BOARD_HTC_3D_SUPPORT := true
+#BOARD_HTC_3D_SUPPORT := true
+
+# Bluetooth/Wifi
+-include device/htc/msm8660-common/bcm.mk
 
 # Kernel
-TARGET_KERNEL_SOURCE   := kernel/htc/msm8660
+TARGET_KERNEL_SOURCE   := kernel/htc/msm8960
 BUILD_KERNEL           := true
 
 # Custom lun file path
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun0/file
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun0/file
 
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_FLASH_BLOCK_SIZE := 262144
