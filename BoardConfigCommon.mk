@@ -37,7 +37,8 @@ BOARD_KERNEL_PAGE_SIZE := 2048
 #BOARD_HTC_3D_SUPPORT := true
 
 # Bluetooth/Wifi
--include device/htc/msm8660-common/bcm.mk
+-include device/htc/msm8660-common/bcm_bt.mk
+-include device/htc/msm8660-common/bcmdhd.mk
 
 # Kernel
 TARGET_KERNEL_SOURCE   := kernel/htc/msm8960
