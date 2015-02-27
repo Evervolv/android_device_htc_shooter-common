@@ -20,7 +20,9 @@ ifneq ($(TARGET_SIMULATOR),true)
 # HAL module implemenation, not prelinked, and stored in
 # hw/<SENSORS_HARDWARE_MODULE_ID>.<ro.product.board>.so
 include $(CLEAR_VARS)
-
+kernel_includes += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
+LOCAL_C_INCLUDES:= $(kernel_includes)
 ifeq ($(TARGET_DEVICE),shooteru)
 LOCAL_MODULE := sensors.shooteru
 else
